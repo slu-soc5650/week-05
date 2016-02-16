@@ -1,0 +1,356 @@
+--------------------------------------------------------------------------------
+      name:  codebook
+       log:  /Volumes/Gox HD/GIS/Labs/week-05/Stata/baltimoreHomelessData.txt
+  log type:  text
+ opened on:  15 Feb 2016, 21:02:33
+
+. 
+. // generate codebook
+. codebook, header notes
+
+               Dataset:  baltimoreHomeless-v2.dta
+            Last saved:  15 Feb 2016 21:02
+                         DATA HAVE CHANGED SINCE LAST SAVED
+
+                 Label:  Lab 05 - Baltimore Homeless Services, Version 2
+   Number of variables:  18
+Number of observations:  31
+                  Size:  7,564 bytes ignoring labels, etc.
+
+_dta:
+  1.  Data obtained on 08 Feb 2016 from Blackboard
+  2.  This dataset contains cleaned raw data of homeless services in the City of
+      Baltimore
+  3.  Dateset updated on 15 Feb 2016 to Version 2
+  4.  Updated dataset contains new variable names and a new binary variable
+      representing service type
+
+--------------------------------------------------------------------------------
+organization                                                   Organization Name
+--------------------------------------------------------------------------------
+
+                  type:  string (str58)
+
+         unique values:  31                       missing "":  0/31
+
+              examples:  "Christ Lutheran Place"
+                         "Eastern Tuberculosis Clinic"
+                         "Karis Home"
+                         "Paul's Place"
+
+               warning:  variable has embedded blanks
+
+organization:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+streetAdd                                                         Street Address
+--------------------------------------------------------------------------------
+
+                  type:  string (str21)
+
+         unique values:  27                       missing "":  0/31
+
+              examples:  "1114 N. Mount St."
+                         "17 W. Franklin St."
+                         "2828 Loch Raven Road"
+                         "421 Fallsway"
+
+               warning:  variable has embedded blanks
+
+streetAdd:
+  1.  08 Feb 2016 - edited variable label
+
+--------------------------------------------------------------------------------
+streetSuite                                                       Suite or Floor
+--------------------------------------------------------------------------------
+
+                  type:  string (str10)
+
+         unique values:  2                        missing "":  29/31
+
+            tabulation:  Freq.  Value
+                            29  ""
+                             1  "7th Floor"
+                             1  "Suite 310"
+
+               warning:  variable has leading and embedded blanks
+
+streetSuite:
+  1.  08 Feb 2016 - edited variable label
+
+--------------------------------------------------------------------------------
+x                                                                       Latitude
+--------------------------------------------------------------------------------
+
+                  type:  string (str18)
+
+         unique values:  27                       missing "":  0/31
+
+              examples:  "-76.59758394849752"
+                         "-76.6087765120769"
+                         "-76.61325913146817"
+                         "-76.61872700940631"
+
+x:
+  1.  08 Feb 2016 - edited variable label
+
+--------------------------------------------------------------------------------
+y                                                                      Longitude
+--------------------------------------------------------------------------------
+
+                  type:  string (str18)
+
+         unique values:  27                       missing "":  0/31
+
+              examples:  "39.28958334709779"
+                         "39.29503141319958"
+                         "39.29991655721443"
+                         "39.31006990292519"
+
+y:
+  1.  08 Feb 2016 - edited variable label
+
+--------------------------------------------------------------------------------
+type                                                   Organization Type, string
+--------------------------------------------------------------------------------
+
+                  type:  string (str34)
+
+         unique values:  4                        missing "":  0/31
+
+            tabulation:  Freq.  Value
+                            13  "Drop-in Center"
+                            10  "Emergency Shelter"
+                             1  "Emergency Shelter & Drop-in Center"
+                             7  "Health Care"
+
+               warning:  variable has embedded blanks
+
+type:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+typeNum                                               Organization Type, numeric
+--------------------------------------------------------------------------------
+
+                  type:  numeric (byte)
+                 label:  typeNumLbl
+
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            13         1  dropin
+                            10         2  emergency
+                             1         3  emergency and dropin
+                             7         4  healthcare
+
+typeNum:
+  1.  08 Feb 2016 - edited variable label, corrected data missing from source
+      variable 'Type'
+
+--------------------------------------------------------------------------------
+dropin                                                     Service type, drop-in
+--------------------------------------------------------------------------------
+
+                  type:  numeric (float)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            18         0  no
+                            13         1  yes
+
+dropin:
+  1.  Variable created from typeNum on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+emergency                                                Service type, emergency
+--------------------------------------------------------------------------------
+
+                  type:  numeric (float)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            21         0  no
+                            10         1  yes
+
+emergency:
+  1.  Variable created from typeNum on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+emergDrop                                    Service type, emergency and drop-in
+--------------------------------------------------------------------------------
+
+                  type:  numeric (float)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            30         0  no
+                             1         1  yes
+
+emergDrop:
+  1.  Variable created from typeNum on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+healthcare                                              Service type, healthcare
+--------------------------------------------------------------------------------
+
+                  type:  numeric (float)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            24         0  no
+                             7         1  yes
+
+healthcare:
+  1.  Variable created from typeNum on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+phone                                                         Organization Phone
+--------------------------------------------------------------------------------
+
+                  type:  string (str12)
+
+         unique values:  31                       missing "":  0/31
+
+              examples:  "410-367-5869"
+                         "410-396-9413"
+                         "410-649-0501"
+                         "410-752-1285"
+
+phone:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+hours                                            Organization Hours of Operation
+--------------------------------------------------------------------------------
+
+                  type:  string (str51)
+
+         unique values:  27                       missing "":  0/31
+
+              examples:  "Everyday: 24 hrs, Intake 9am-6pm"
+                         "Everyday: 7am-7pm"
+                         "M-F: 1-5pm"
+                         "M-F: 8am-4:30pm"
+
+               warning:  variable has embedded blanks
+
+hours:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+men                                                       Clients Accepted - Men
+--------------------------------------------------------------------------------
+
+                  type:  numeric (byte)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            10         0  no
+                            21         1  yes
+
+men:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+women                                                   Clients Accepted - Women
+--------------------------------------------------------------------------------
+
+                  type:  numeric (byte)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            10         0  no
+                            21         1  yes
+
+women:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+womenKids                                     Clients Accepted - Women with Kids
+--------------------------------------------------------------------------------
+
+                  type:  numeric (byte)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            23         0  no
+                             8         1  yes
+
+womenKids:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+youth                                                   Clients Accepted - Youth
+--------------------------------------------------------------------------------
+
+                  type:  numeric (byte)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            28         0  no
+                             3         1  yes
+
+youth:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+--------------------------------------------------------------------------------
+families                                             Clients Accepted - Families
+--------------------------------------------------------------------------------
+
+                  type:  numeric (byte)
+                 label:  yesno
+
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  0/31
+
+            tabulation:  Freq.   Numeric  Label
+                            18         0  no
+                            13         1  yes
+
+families:
+  1.  08 Feb 2016 - edited variable label
+  2.  Variable updated on 15 Feb 2016 by Chris
+
+. 
+. // close codebook specific file
+. log close codebook
+      name:  codebook
+       log:  /Volumes/Gox HD/GIS/Labs/week-05/Stata/baltimoreHomelessData.txt
+  log type:  text
+ closed on:  15 Feb 2016, 21:02:33
+--------------------------------------------------------------------------------

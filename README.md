@@ -1,14 +1,19 @@
 lecture-05 <img src="https://slu-soc5650.github.io/images/logo.png" align="right" />
 ===========================================================
 [![](https://img.shields.io/badge/semester-spring%202018-orange.svg)](https://github.com/slu-soc5650/lecture-05)
-[![](https://img.shields.io/badge/release-LP%20only-red.svg)](https://github.com/slu-soc5650/lecture-05)
+[![](https://img.shields.io/badge/release-full-brightgreen.svg)](https://github.com/slu-soc5650/lecture-05)
 [![](https://img.shields.io/github/release/slu-soc5650/lecture-05.svg?label=version)](https://github.com/slu-soc5650/lecture-05/releases)
 [![](https://img.shields.io/github/last-commit/slu-soc5650/lecture-05.svg)](https://github.com/slu-soc5650/lecture-05/commits/master)
 [![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-05.svg)](https://github.com/slu-soc5650/lecture-05)
 
 This repository contains files for:
 
+- `ArcMap` - ArcMap processes handout
+- `Functions` - `R` functions handout
+- `Lab-04` - lab 04 handout
 - `LP-05` - lecture prep instructions
+- `PS-03` - problem set 3 handout
+- `Slides` - lecture slides
 - `LICENSE.md`
 - `README.md`
 

@@ -1,3 +1,9 @@
+# lecture-05 v18.3.0
+
+* Update `NEWS.md`, `NEWS_SITE.md`, and `README.md`
+* Add lecture handouts and slides
+* Add PS-03 handout
+
 # lecture-05 v18.1.0
 
 * Add `NEWS.md`

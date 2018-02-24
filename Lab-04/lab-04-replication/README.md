@@ -1,0 +1,1 @@
+The purpose of this project is to replicate the Lab-04 assignment. The Jefferson City, MO data (see `/data/`) are drawn from the course data release with the exception of the county-level demographic data. These were downloaded from [GitHub](https://github.com/slu-openGIS/MO_DEMOS_JeffCityRegion).

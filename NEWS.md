@@ -1,3 +1,7 @@
+# lecture-05 v18.4.0
+
+* Add Lab-04 replication materials
+
 # lecture-05 v18.3.0
 
 * Update `NEWS.md`, `NEWS_SITE.md`, and `README.md`
